@@ -1,40 +1,54 @@
 <script setup>
 import { ref } from 'vue'
-import Switch from  "./switch/index.vue"
+import Switch from "./switch/index.vue"
+import Adsorption from "./adsorption/index.vue"
+import Input from "./input/input.vue"
 defineProps({
   msg: String,
 })
 
 const count = ref(0)
 </script>
-
 <template>
-  <h1>{{ msg }}</h1>
-<Switch></Switch>
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+  <h1 class="title"> {{ msg }}
+  </h1>
+  <Switch define-active="active"></Switch>
+  <!-- <Input></Input> -->
+  <div>
+    <button class="button" style="margin-right: 90px;">brother</button>
+    <!-- 1= -->
+    <Adsorption width="20px" :execute="true" />
+    <!-- <button class="button" style="margin-left: 10px;">sister</button> -->
+    <span>sister</span>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+
+  </div>
+  <div>
+    <div class="div1">div1</div>
+    <Adsorption height="20px" />
+    <div class="div2">div2</div>
+  </div>
+  <!-- <Adsorption /> -->
 </template>
 
 <style scoped>
 .read-the-docs {
   color: #888;
+}
+
+.div1 {
+  height: 60px;
+ border: solid 1px red ;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.div2 {
+  height: 60px;
+  background: var(--color-red);
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
 }
 </style>

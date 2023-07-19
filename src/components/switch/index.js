@@ -1,6 +1,7 @@
 import { createMachine } from "@zag-js/core";
-const machine = createMachine({
-  initial: "active", //初始状态‘
+const machine =(initial)=>{
+  return  createMachine({
+  initial: initial||"active", //初始状态‘
   states: {
     active: {
       on: {
@@ -18,9 +19,10 @@ const machine = createMachine({
     },
   },
 });
+} 
 
 let connect =function (state, send) {
-  console.log('state',state.value)
+  // console.log('state',state.value)
   const active = state.value.matches("active")
   return {
     active,

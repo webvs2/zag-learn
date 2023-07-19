@@ -12,7 +12,10 @@
     "@zag-js/core": "^0.10.2",
     "@zag-js/react": "^0.10.5",
     "@zag-js/vue": "^0.10.2",
-    "vue": "^3.2.47"
+    "lodash-es": "^4.17.21",
+    "sass": "^1.63.6",
+    "vue": "^3.2.47",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
